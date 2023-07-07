@@ -8,7 +8,7 @@ for lin in range(numero_linhas): # laço responsável pela quantidade de linhas
     
     for col in range(numero_colunas): # laço responsavel pela quantidade de colunas
         valor = input(f'Insira o {col + 1}º valor da {lin + 1}º linha: ').center(3) # Define os valores e centraliza-os em 3 caracteres
-        linha.append(valor) # adiciona o valor à lista
+        linha.append(valor) # adiciona o valor à linha
         
     matriz.append(linha) # adiciona cada linha à matriz
 
