@@ -1,5 +1,4 @@
 # Dicionário contendo os vértices e suas ligações
-
 vértices = {
     'A': ['B', 'C', 'D'],
     'B': [],
@@ -11,7 +10,6 @@ vértices = {
 }
 
 # Dicionário contendo o STATUS de cada vértice
-
 STATUS = {
     'A': 1,
     'B': 1,
@@ -23,33 +21,30 @@ STATUS = {
 }
 
 # Listas que receberão os vértices
-
 FILA = []
 processados = []
 
 # Cria a função que realiza a Busca em Largura
-
 def busca_em_largura(vértices, STATUS, nó):
 
-    FILA.append(nó)  # Coloca o vértice inicial 'A' em FILA
-    STATUS[nó] = 2  # muda o STATUS de 'A' para 2
+    FILA.append(nó)  # Coloca o vértice inicial na FILA
+    STATUS[nó] = 2  # muda o STATUS do vértice inicial para 2
 
     while FILA:  # Até a FILA estar vazia
-        N = FILA.pop(0)  # Remova o vértice da frente (N) de FILA
-        processados.append(N)  # Adiciona N para a lista de processados
-        STATUS[N] = 3  # muda o STATUS de N para 3
+        primeiro = FILA.pop(0)  # Remove o primeiro elemento da FILA
+        processados.append(primeiro)  # Adiciona o primeiro elemento na lista de processados
+        STATUS[primeiro] = 3  # muda o STATUS do primeiro elemento para 3
 
-        for J in vértices[N]:  # Para cada vizinho (J) de N
-            if STATUS[J] == 1:  # Se o STATUS de J for igual a 1
-                FILA.append(J)  # Adicione J ao final da FILA
-                STATUS[J] = 2  # Mude o STATUS de J para 2
+        for vizinho in vértices[primeiro]:  # Para cada vizinho do primeiro elemento da FILA
+            if STATUS[vizinho] == 1:  # Se o STATUS do vizinho for igual a 1
+                FILA.append(vizinho)  # Adicione o vizinho ao final da FILA
+                STATUS[vizinho] = 2  # Mude o STATUS do vizinho para 2
 
-            elif STATUS[J] == 2 or STATUS[J] == 3:  # Se o STATUS de J for igual a 2 ou 3
-                continue  # Ignore o vértice J
+            elif STATUS[vizinho] == 2 or STATUS[vizinho] == 3:  # Se o STATUS do vizinho for igual a 2 ou 3
+                continue  # Ignore esse vizinho
 
 # Usa a função que realiza a Busca em Largura
-
-busca_em_largura(vértices, STATUS, 'A')
+busca_em_largura(vértices, STATUS, 'A') # O vértice "A" é definido como nó inicial
 
 # Apresenta o resultado da Busca em Largura
 print('Resultado da Busca em Largura:')
