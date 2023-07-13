@@ -1,4 +1,3 @@
-# função recursiva que retorna o valor da sequência de fibonacci em uma determinada posição
 def fibonacci(num): # "num" representa a posição do valor na sequência de fibonacci
     if num <= 0: # se o número for menor ou igual a 0
         return 0 # retorne 0
