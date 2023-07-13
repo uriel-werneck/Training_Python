@@ -2,7 +2,7 @@ def busca_binária_recursiva(lista, número):
     if len(lista) == 0: # se a lista estiver vazia
         return False # o número procurado não está na lista
 
-    metade = len(lista) // 2 # posição do elemento central da lista
+    metade = len(lista) // 2 # calcula a posição do elemento central da lista
 
     if número == lista[metade]: # se o número procurado for igual ao número na posição central da lista
         return True # o número procurado está na lista
@@ -15,6 +15,9 @@ def busca_binária_recursiva(lista, número):
 
 
 lista = [4, 13, 20, 25, 44, 50, 52] # lista, em ordem crescente, que será usada como parâmetro da função
+print('Lista:', lista) # apresenta a lista
+
 número = int(input('Escolha um número: ')) # número que será buscado na lista
 
-print(busca_binária_recursiva(lista, número)) # apresenta o resultado da busca binária recursiva
+resultado = busca_binária_recursiva(lista, número) # realiza a busca binária recursiva
+print('Resultado:', resultado) # apresenta o resultado da busca
