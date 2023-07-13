@@ -9,5 +9,7 @@ def fibonacci(num): # "num" representa a posição do valor na sequência de fib
 
 qnt = int(input('Quantos valores deseja ver? ')) # Define quantos elementos da sequência de fibonacci serão exibidos
 
+print('Sequência de Fibonacci:', end=' ')
+
 for i in range(qnt): # itera de 0 até a quantidade escolhida
     print(fibonacci(i), end=' ') # apresenta os valores da sequência de fibonacci
