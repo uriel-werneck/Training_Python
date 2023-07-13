@@ -7,6 +7,7 @@ def fibonacci(num): # "num" representa a posição do valor na sequência de fib
     else: # se o número for maior que 1
         return fibonacci(num - 1) + fibonacci(num - 2) # retorne a soma dos dois elementos anteriores
 
+
 qnt = int(input('Quantos valores deseja ver? ')) # Define quantos elementos da sequência de fibonacci serão exibidos
 
 print('Sequência de Fibonacci:', end=' ')
