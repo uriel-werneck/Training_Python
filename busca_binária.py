@@ -1,5 +1,7 @@
 lista = [2, 5, 18, 22, 25, 32, 44, 50] # lista ordenada em ordem crescente
 
+print('Lista:', lista) # apresenta a lista
+
 início = 0 # posição inicial da lista
 final = len(lista) - 1 # posição final da lista
 metade = (início + final) // 2 # posição central da lista
