@@ -1,14 +1,14 @@
-lista = [17, 4, 23, 8, 19, 12]
+my_list = [17, 4, 23, 8, 19, 12]
 
-print('Lista desorganizada:', lista)
+print('Unsorted list:', my_list)
 
-c = 1 # flag que inicia o looping while
+flag = 1  # flag to start the while loop
 
-while c != 0: # enquanto c for diferente de 0
-    c = 0 # se nenhum valor for invertido, o laço será finalizado
-    for i in range(1, len(lista)): # verifica cada elemento da lista a partir do segundo
-        if lista[i] < lista[i - 1]: # se o valor da frente for menor que o valor de trás
-            lista[i], lista[i - 1] = lista[i - 1], lista[i] # inverte os valores
-            c = 1 # se algum valor tiver sido invertido, o laço reinicia
+while flag != 0:  # while flag is different from 0
+    flag = 0  # if no values are swapped, the loop will be terminated
+    for i in range(1, len(my_list)):  # check each element in the list starting from the second one
+        if my_list[i] < my_list[i - 1]:  # if the value ahead is smaller than the value behing
+            my_list[i], my_list[i - 1] = my_list[i - 1], my_list[i]  # swap the values
+            flag = 1  # if any value is swapped, the loops restarts
 
-print('Lista organizada:', lista)
+print('Sorted list:', my_list)
